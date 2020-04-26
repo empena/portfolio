@@ -9,13 +9,13 @@ const Navbar = () => {
             <h1 style={styles.logo}>EP</h1>
           </div>
         <div style={styles.rightNavStyles}>
-          <div class='main' id="portfolio" >
+          <div className='main' id="portfolio" >
             <a href="#portfolio" style={styles.button}>Portfolio</a>
           </div>
-          <div class='main' id="contact" >
+          <div className='main' id="contact" >
             <a href="#contact" style={styles.button}>Contact</a>
           </div>
-          <div class='main' id="findme" >
+          <div className='main' id="findme" >
             <a href="#findme" style={styles.button}>Find Me</a>
           </div>
         </div>
