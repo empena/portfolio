@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContactForm from "../forms/ContactForm";
+import axios from 'axios';
 
 const Home = () => {
+
+  const [ projects, setProjects ] = useState([])
+
+  useEffect( () => {
+    axios.get(`/api/projects`)
+    .then(res => {
+      console.log(res)
+    return setProjects(res.data )
+    }).catch(err => {
+      console.log(err)
+    }
+    )}, [])
+
+  const renderProjects = () => {
+    return projects.map( project => (
+      <div key={project.id}>
+        <h1>{project.name}</h1> 
+      </div>
+    ))
+  }
+
   return (
     <>
       <div style={styles.header}>Coder / Designer</div>
       <div style={styles.portfolio}>Portfolio</div>
+      {renderProjects()}
       <div style={styles.contactContainer}>
         <div style={styles.contact}>
           <h1>Contact</h1>
