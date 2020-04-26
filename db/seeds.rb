@@ -6,24 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+project_list = [
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+  [ "Wigwam", "Package Design by Emily Pena", "Design", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+]
 
-Project.create (
-  name: 'Wigwam',
-  description: 'Package Design by Emily Pena',
-  category: 'Design'
-),
-
-Project.create (
-  name: 'Down the Aisle',
-  description: 'Package Design by Emily Pena',
-  category: 'Design'
-),
-
-Project.create (
-  name: 'Digital Glovebox',
-  description: 'Developed by Emily Pena, Seth Wheeler, Tom Gaston, Qi Cao',
-  category: 'Code'
-  link: "https://github.com/devpointlabs/DigitalGloveBox"
-)
+project_list.each do | name, category, description, image, link |
+  Project.create( name: name, category: category, description: description, image: image, link: link )
+end
 
 puts "Seeded"

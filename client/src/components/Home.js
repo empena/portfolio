@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ContactForm from "../forms/ContactForm";
 import axios from 'axios';
+import '../styles/ProjectCard.css'
+import Projects from './Projects'
 
 const Home = () => {
 
@@ -9,8 +11,7 @@ const Home = () => {
   useEffect( () => {
     axios.get(`/api/projects`)
     .then(res => {
-      console.log(res)
-    return setProjects(res.data )
+      return setProjects(res.data )
     }).catch(err => {
       console.log(err)
     }
@@ -18,8 +19,8 @@ const Home = () => {
 
   const renderProjects = () => {
     return projects.map( project => (
-      <div key={project.id}>
-        <h1>{project.name}</h1> 
+      <div key={project.id} style={styles.card} >
+        <Projects project={project} />
       </div>
     ))
   }
@@ -27,8 +28,14 @@ const Home = () => {
   return (
     <>
       <div style={styles.header}>Coder / Designer</div>
-      <div style={styles.portfolio}>Portfolio</div>
-      {renderProjects()}
+      
+      <div style={styles.portfolio}>
+        <h1>Portfolio</h1>
+          {renderProjects()}
+      </div>
+
+
+      
       <div style={styles.contactContainer}>
         <div style={styles.contact}>
           <h1>Contact</h1>
@@ -41,8 +48,8 @@ const Home = () => {
         </div>
         <div style={styles.findme}>
           <h1>Find Me</h1>
-          <button>LinkedIn</button>
-          <button>GitHub</button>
+          <a href="https://www.linkedin.com/in/emilypena/">LinkedIn</a>
+          <a href="https://github.com/empena">Github</a>
         </div>
       </div>
     </>
@@ -61,8 +68,11 @@ const styles = {
     paddingTop: "300px",
   },
   portfolio: {
-    backgroundColor: "pink",
-    height: "40em",
+    display: 'flex',
+    flexFlow: 'row wrap',
+    justifyContent: 'center',
+    backgroundColor: "white",
+    height: "auto",
     padding: "3em",
   },
   contactContainer: {
@@ -71,17 +81,22 @@ const styles = {
     height: 'auto',
   },
   contact: {
-    backgroundColor: "red",
     display: "flex",
     flexDirection: "column",
     width: "60%",
     padding: "3em",
   },
   findme: {
-    backgroundColor: "blue",
     display: "flex",
     flexDirection: "column",
     width: "40%",
     padding: "3em",
   },
-};
+  card: {
+    display: 'flex',
+    // flexGrow: '4',
+    height: '16em',
+    width: '16em',
+    backgrounColor: 'red',
+  },
+}
