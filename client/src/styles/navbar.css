@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#portfolio {
+  height: 600px;
+}
+
+#contact {
+  height: 600px;
+}
+
+#findme {
+  height: 600px;
+}
