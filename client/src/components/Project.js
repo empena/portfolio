@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ContactForm from '../forms/ContactForm'
+import ContactForm from "../forms/ContactForm";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 const Project = (props) => {
   const [project, setProject] = useState([]);
@@ -41,29 +43,8 @@ const Project = (props) => {
         src={`${project.image}`}
         style={styles.containerImage}
       />
-      <div style={styles.contactContainer}>
-        <div style={styles.contact}>
-          <h1 style={styles.h1}>Contact</h1>
-          <p style={styles.p2}>
-            I am interested in freelance opportunities. However if you have a
-            request or question don’t hesitate to contact me with the form
-            below.
-          </p>
-          <ContactForm />
-        </div>
-        <div style={styles.findme}>
-          <h1 style={styles.h1}>Find Me</h1>
-          <a
-            href="https://www.linkedin.com/in/emilypena/"
-            style={styles.circle}
-          >
-            LinkedIn
-          </a>
-          <a href="https://github.com/empena" style={styles.circle}>
-            Github
-          </a>
-        </div>
-      </div>
+      <Contact />
+      <Footer />
     </>
   );
 };
@@ -71,51 +52,39 @@ const Project = (props) => {
 export default Project;
 
 const styles = {
-  container: {
-    backgroundColor: "#232323",
-    height: "5em",
-    color: "#00FFD1",
-    textAlign: "center",
-    padding: "120px",
-  },
-  containerImage: {
-    display: "flex",
-    flexFlow: "column wrap",
-    backgroundColor: "white",
-    width: "100%",
-    height: "100%",
-    flexBasis: "auto",
-  },
-  circle: {
-    marginBottom: "1em",
-    border: "1px solid #00FFD1",
-    height: "50px",
-    borderRadius: "50%",
-    width: "50px",
-  },
-  p2: {
-    color: "#ADADAD",
-    lineHeight: "23px",
-  },
-  contactContainer: {
-    display: "flex",
+  contactContainerOne: {
     backgroundColor: "#232323",
     height: "auto",
-    paddingBottom: "5em",
+  },
+  contactContainerTwo: {
+    display: "flex",
+    maxWidth: "1024px",
+    margin: "auto",
+    paddingTop: "2em",
+    paddingBottom: "4em",
   },
   contact: {
     display: "flex",
     flexDirection: "column",
     width: "60%",
-    padding: "3em",
+    paddingRight: "4em",
   },
   findme: {
     display: "flex",
     flexDirection: "column",
     width: "40%",
-    padding: "3em",
   },
-  h1: {
+  iconContainer: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  circle: {
+    marginRight: "1em",
+    border: "1px solid #00FFD1",
+    borderRadius: "50%",
+    width: "20px",
+    padding: ".75em",
+    textAlign: "center",
     color: "#00FFD1",
   },
 };
