@@ -1,13 +1,13 @@
-import React, { Fragment, } from 'react';
-import { Route, Switch, } from 'react-router-dom';
-import Home from './components/Home';
-import NoMatch from './components/NoMatch';
-import Navbar from './components/Navbar';
-import Project from './components/Project'
+import React, { Fragment } from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
+import NoMatch from "./components/NoMatch";
+import Navbar from "./components/Navbar";
+import Project from "./components/Project";
 
 const App = () => (
   <Fragment>
-    <Navbar/>
+    <Navbar />
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
