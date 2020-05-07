@@ -1,0 +1,92 @@
+.contactContainerOne {
+  background-color: #232323;
+  height: auto;
+}
+
+.contactContainerTwo {
+  display: flex;
+  max-width: 1024px;
+  margin: auto;
+  /* margin-left: 3em;
+  margin-right: 3em; */
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-right: 4em;
+}
+
+.findme {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.circle {
+  margin-right: 1em;
+  border: 1px solid #00FFD1;
+  border-radius: 50%;
+  width: 20px;
+  padding: .75em;
+  text-align: center;
+  color: #00FFD1;
+}
+
+.p {
+  color: #ADADAD;
+  font-size: 11px;
+}
+
+.h1 {
+  color: #00FFD1;
+}
+
+.p2 {
+  color: #ADADAD;
+  line-height: 23px;
+}
+
+
+@media screen and (max-width: 1140px) {
+.contactContainerTwo {
+  display: flex;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+  .contactContainerTwo {
+    display: flex;
+    flex-flow: column wrap;
+    height: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 2em;
+    padding-bottom: em;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .findme {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4em;
+  }
+
+}
