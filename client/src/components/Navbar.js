@@ -1,7 +1,5 @@
 import React from "react";
-import "../styles/navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
@@ -12,7 +10,7 @@ const Navbar = () => {
             EP
           </a>
         </div>
-       <div className="rightNavStyles">
+        <div className="rightNavStyles">
           <a href="#portfolio" className="navbutton">
             Portfolio
           </a>
@@ -23,7 +21,6 @@ const Navbar = () => {
             Find Me
           </a>
         </div>
-        
       </div>
     </>
   );
