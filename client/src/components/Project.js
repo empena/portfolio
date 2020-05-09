@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ContactForm from "../forms/ContactForm";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import "../styles/Portfolio.css";
+
 
 const Project = (props) => {
   const [project, setProject] = useState([]);
@@ -21,28 +25,27 @@ const Project = (props) => {
 
   return (
     <>
-      <div style={styles.container}>
+      <div style={styles.headerContainer}>
         <h1>{project.name}</h1>
-        <a href={project.link} style={styles.circle}>
-          Github
+        <br />
+        <a href={project.link_git} style={styles.circle}>
+          <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
-        <p style={styles.p2}>{project.description}</p>
+        <a href={project.link_view} style={styles.circle}>
+          <FontAwesomeIcon icon={faEye} size="md" />
+        </a>
       </div>
-      <img
-        alt="project"
-        src={`${project.image}`}
-        style={styles.containerImage}
-      />
-      <img
-        alt="project"
-        src={`${project.image}`}
-        style={styles.containerImage}
-      />
-      <img
-        alt="project"
-        src={`${project.image}`}
-        style={styles.containerImage}
-      />
+
+      <section id="portfolio">
+        <div style={styles.imageContainer} className="column">
+          <img alt="project" src={`${project.image}`} />
+          <img alt="project" src={`${project.image}`} />
+          <img alt="project" src={`${project.image}`} />
+        </div>
+        <div style={styles.descriptionContainer}>
+          <p style={styles.p2}>{project.description}</p>
+        </div>
+      </section>
       <Contact />
       <Footer />
     </>
@@ -52,32 +55,44 @@ const Project = (props) => {
 export default Project;
 
 const styles = {
-  contactContainerOne: {
-    backgroundColor: "#232323",
-    height: "auto",
+  headerContainer: {
+      backgroundColor: "#232323",
+      width: 'auto',
+      height: "auto",
+      color: "#00FFD1",
+      textAlign: "center",
+      padding: "100px",
+      marginTop: '1.5em',
   },
-  contactContainerTwo: {
+
+  descriptionContainer: {
     display: "flex",
+    flexDirection: "column",
     maxWidth: "1024px",
     margin: "auto",
-    paddingTop: "2em",
-    paddingBottom: "4em",
+    backgroundColor: "white",
+    textAlign: "center",
+    marginBottom: "8em",
   },
-  contact: {
+
+  imageContainer: {
     display: "flex",
     flexDirection: "column",
-    width: "60%",
-    paddingRight: "4em",
+    maxWidth: "1024px",
+    margin: "auto",
+    backgroundColor: "white",
+    marginTop: "5em",
   },
-  findme: {
-    display: "flex",
-    flexDirection: "column",
-    width: "40%",
+
+  h1: {
+    color: "#00FFD1",
   },
-  iconContainer: {
-    display: "flex",
-    flexDirection: "row",
+
+  p2: {
+    color: "#ADADAD",
+    lineHeight: "23px",
   },
+
   circle: {
     marginRight: "1em",
     border: "1px solid #00FFD1",
