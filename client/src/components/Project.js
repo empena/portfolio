@@ -32,7 +32,7 @@ const Project = (props) => {
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
         <a href={project.link_view} style={styles.circle}>
-          <FontAwesomeIcon icon={faEye} size="md" />
+          <FontAwesomeIcon icon={faEye} />
         </a>
       </div>
 
