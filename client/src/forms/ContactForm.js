@@ -52,7 +52,7 @@ const ContactForm = () => {
         onChange={(e) => setMessage(e.target.value)}
       />
       <br />
-      {isSent && <p style={styles.p2}>Your email has been sent. Thank you.</p>}
+      {isSent && <p style={styles.p2}>Your message was sent. Thank you.</p>}
       <button disabled={!isEnabled} className="button" onClick={() => setIsSent(!isSent)} type="submit">
         SEND
       </button>
