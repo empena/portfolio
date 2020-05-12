@@ -9,7 +9,8 @@ import "../styles/Portfolio.css";
 
 
 const Project = (props) => {
-  const [project, setProject] = useState([]);
+
+  const [project, setProject] = useState({});
   const { id } = props.match.params;
 
   useEffect(() => {
@@ -28,19 +29,18 @@ const Project = (props) => {
       <div style={styles.headerContainer}>
         <h1>{project.name}</h1>
         <br />
-        <a href={project.link_git} style={styles.circle}>
+        <a href={project.link} style={styles.circle}>
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
-        <a href={project.link_view} style={styles.circle}>
+        <a href={project.link} style={styles.circle}>
           <FontAwesomeIcon icon={faEye} />
         </a>
       </div>
 
       <section id="portfolio">
-        <div style={styles.imageContainer} className="column">
-          <img alt="project" src={`${project.image}`} />
-          <img alt="project" src={`${project.image}`} />
-          <img alt="project" src={`${project.image}`} />
+        <div style={styles.imageContainer} className="column">      
+      <img alt="project" src={`${project.image}`}/>
+    
         </div>
         <div style={styles.descriptionContainer}>
           <p style={styles.p2}>{project.description}</p>

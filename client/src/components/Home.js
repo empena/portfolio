@@ -14,6 +14,7 @@ const Home = () => {
       .get(`/api/projects`)
       .then((res) => {
         setProjects(res.data);
+        // console.log(res)
       })
       .catch((err) => {
         console.log(err);
