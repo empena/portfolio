@@ -7,9 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Portfolio.css";
 
-
 const Project = (props) => {
-
   const [project, setProject] = useState({});
   const { id } = props.match.params;
 
@@ -38,8 +36,13 @@ const Project = (props) => {
       </div>
 
       <section id="portfolio">
-        <div style={styles.imageContainer} className="column">      
-      <img alt="project" src={`${project.image}`}/>
+        <div style={styles.imageContainer} className="column">
+          <img alt="project" src={`${project.imagea}`} />
+          <img alt="project" src={`${project.imageb}`} />
+          <img alt="project" src={`${project.imagec}`} />
+          <img alt="project" src={`${project.imaged}`} />
+          <img alt="project" src={`${project.imagee}`} />
+          <img alt="project" src={`${project.imagef}`} />
         </div>
         <div style={styles.descriptionContainer}>
           <p style={styles.p2}>{project.description}</p>
@@ -55,13 +58,13 @@ export default Project;
 
 const styles = {
   headerContainer: {
-      backgroundColor: "#232323",
-      width: 'auto',
-      height: "auto",
-      color: "#00FFD1",
-      textAlign: "center",
-      padding: "100px",
-      marginTop: '1.5em',
+    backgroundColor: "#232323",
+    width: "auto",
+    height: "auto",
+    color: "#00FFD1",
+    textAlign: "center",
+    padding: "100px",
+    marginTop: "1.5em",
   },
 
   descriptionContainer: {
