@@ -40,7 +40,6 @@ const Project = (props) => {
       <section id="portfolio">
         <div style={styles.imageContainer} className="column">      
       <img alt="project" src={`${project.image}`}/>
-    
         </div>
         <div style={styles.descriptionContainer}>
           <p style={styles.p2}>{project.description}</p>

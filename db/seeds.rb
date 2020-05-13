@@ -7,24 +7,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 project_list = [
-  [ "Aetna Federal Open Season", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Grand Wailea", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Party Pop", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Bigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Digwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Code", "Package Design by Emily Pena", "https://3.bp.blogspot.com/-Nvfm45xx00g/WvUgADDoQnI/AAAAAAAFF9g/OT0WBjlZFrYXNBxFk_fIn7hUTumkBTeSgCLcBGAs/s1600/Tra%2BDinh%2BTea%2B%25280%2529.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
-  [ "Wigwam", "Design", "Package Design by Emily Pena", "https://cdn.dribbble.com/users/2282250/screenshots/7081885/coffee-bag-packaging-design-.jpg", "https://github.com/devpointlabs/DigitalGloveBox" ],
+
+  [
+    "Wigwam",
+    "Design",
+    "Package Design by Emily Pena",
+    "https://res.cloudinary.com/dvwwzmsmn/image/upload/v1589308642/Portfolio/Wigwam_thumb_xauszz.jpg",
+    "https://github.com/devpointlabs/DigitalGloveBox"
+  ],
+
+  [
+    "Batters Up",
+    "Design",
+    "Menu Design by Emily Pena",
+    "https://res.cloudinary.com/dvwwzmsmn/image/upload/v1589308638/Portfolio/BattersUp_thumb_sddeix.jpg",
+    "https://github.com/devpointlabs/DigitalGloveBox"
+  ],
+
+  [
+    "Benton Type Specimen",
+    "Design",
+    "Design by Emily Pena",
+    "https://res.cloudinary.com/dvwwzmsmn/image/upload/v1589308638/Portfolio/Benton_thumb_jj6cdm.jpg",
+    "https://github.com/devpointlabs/DigitalGloveBox"
+  ],
+
+  [
+    "4+1 Magazine",
+    "Design",
+    "Design by Emily Pena",
+    "https://res.cloudinary.com/dvwwzmsmn/image/upload/v1589308637/Portfolio/4_1_thumb_gzygqh.jpg",
+    "https://github.com/devpointlabs/DigitalGloveBox"
+  ],
 ]
 
 project_list.each do | name, category, description, image, link |
