@@ -2,15 +2,18 @@ import React from "react";
 import "../styles/Portfolio.css";
 
 const Images = (props) => {
+  
+  // filter through array return images with a value
+  
   return (
-    <>
-      <img alt="project" src={`${props.images.imagea}`} />
-      <img alt="project" src={`${props.images.imageb}`} />
-      <img alt="project" src={`${props.images.imagec}`} />
-      <img alt="project" src={`${props.images.imaged}`} />
-      <img alt="project" src={`${props.images.imagee}`} />
-      <img alt="project" src={`${props.images.imagef}`} />
-    </>
+    <div>
+      <img alt="project" src={`${props.project.imagea}`} />
+      <img alt="project" src={`${props.project.imageb}`} />
+      <img alt="project" src={`${props.project.imagec}`} />
+      <img alt="project" src={`${props.project.imaged}`} />
+      <img alt="project" src={`${props.project.imagee}`} />
+      <img alt="project" src={`${props.project.imagef}`} />
+    </div>
   );
 };
 
