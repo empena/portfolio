@@ -47,11 +47,10 @@ const Project = (props) => {
   }
 
   const images = () => {
-    const img = { project }
-    const image = Object.values(img)
+    const image = Object.values({project})
     return image.map((images) => (
-      <div key={images.id} className="column">
-        <Images images={images} />
+      <div className="column">
+        <Images project={images} />
       </div>
     ))
   };
