@@ -6,9 +6,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Portfolio.css";
+import Images from "./Images";
 
 const Project = (props) => {
-  const [project, setProject] = useState({});
+  const [project, setProject] = useState([]);
   const { id } = props.match.params;
 
   useEffect(() => {
@@ -22,28 +23,46 @@ const Project = (props) => {
       });
   }, [id]);
 
+  const headerLayout = () => {
+    if (project.category === 'Code') {
+      return (
+        <div style={styles.headerContainer}>
+          <h1>{project.name}</h1>
+          <br />
+          <a href={project.link} style={styles.circle}>
+            <FontAwesomeIcon icon={faGithub} size="lg" />
+          </a>
+          <a href={project.link} style={styles.circle}>
+            <FontAwesomeIcon icon={faEye} />
+          </a>
+        </div>
+      );
+    } else {
+      return (
+        <div style={styles.headerContainer}>
+          <h1>{project.name}</h1>
+        </div>
+      )
+    }
+  }
+
+  const images = () => {
+    const img = { project }
+    const image = Object.values(img)
+    return image.map((images) => (
+      <div key={images.id} className="column">
+        <Images images={images} />
+      </div>
+    ))
+  };
+
   return (
     <>
-      <div style={styles.headerContainer}>
-        <h1>{project.name}</h1>
-        <br />
-        <a href={project.link} style={styles.circle}>
-          <FontAwesomeIcon icon={faGithub} size="lg" />
-        </a>
-        <a href={project.link} style={styles.circle}>
-          <FontAwesomeIcon icon={faEye} />
-        </a>
-      </div>
-
+    <div>{headerLayout()}</div>
       <section id="portfolio">
-        <div style={styles.imageContainer} className="column">
-          <img alt="project" src={`${project.imagea}`} />
-          <img alt="project" src={`${project.imageb}`} />
-          <img alt="project" src={`${project.imagec}`} />
-          <img alt="project" src={`${project.imaged}`} />
-          <img alt="project" src={`${project.imagee}`} />
-          <img alt="project" src={`${project.imagef}`} />
-        </div>
+        <div className="portfolioContainer">
+          <div className="row">{images()}</div>
+          </div>
         <div style={styles.descriptionContainer}>
           <p style={styles.p2}>{project.description}</p>
         </div>
@@ -75,15 +94,6 @@ const styles = {
     backgroundColor: "white",
     textAlign: "center",
     marginBottom: "8em",
-  },
-
-  imageContainer: {
-    display: "flex",
-    flexDirection: "column",
-    maxWidth: "1024px",
-    margin: "auto",
-    backgroundColor: "white",
-    marginTop: "5em",
   },
 
   h1: {
