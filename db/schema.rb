@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_13_021936) do
+ActiveRecord::Schema.define(version: 2020_05_13_031337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_021936) do
     t.string "imaged"
     t.string "imagee"
     t.string "imagef"
+    t.string "linka"
   end
 
   add_foreign_key "images", "projects"
