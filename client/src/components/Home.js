@@ -22,14 +22,14 @@ const Home = () => {
   }, []);
 
   const sortCodeCategory = () => {
-    var project = [...projects]
+    var project = [...projects];
     setProjects(project.sort((a, b) => a.category.localeCompare(b.category)));
-  }
+  };
 
   const sortDesignCategory = () => {
-    var project = [...projects]
+    var project = [...projects];
     setProjects(project.sort((a, b) => b.category.localeCompare(a.category)));
-  }
+  };
 
   const renderProjects = () => {
     return projects.map((project) => (
@@ -51,9 +51,13 @@ const Home = () => {
               </div>
               <div className="portfolioHeaderRight">
                 <p style={styles.p}>SORT: &nbsp;</p>
-                <p style={styles.pPointer} onClick={() => sortCodeCategory()}>CODE &nbsp;</p>
+                <p style={styles.pPointer} onClick={() => sortCodeCategory()}>
+                  CODE &nbsp;
+                </p>
                 <p style={styles.p}> | &nbsp;</p>
-                <p style={styles.pPointer} onClick={() => sortDesignCategory()}>DESIGN &nbsp;</p>
+                <p style={styles.pPointer} onClick={() => sortDesignCategory()}>
+                  DESIGN &nbsp;
+                </p>
               </div>
             </div>
             <div className="row">{renderProjects()}</div>
@@ -76,6 +80,6 @@ const styles = {
   pPointer: {
     color: "#ADADAD",
     fontSize: "11px",
-    cursor: 'pointer',
+    cursor: "pointer",
   },
 };
